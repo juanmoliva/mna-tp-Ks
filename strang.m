@@ -1,9 +1,9 @@
 % Strang
 function vals_res = strang(vals, k, delta_t, positive, m)
-  if is_plus
-    vals_res = non_linear_part(linear_part(non_linear_part(vals, k, delta_t/2), k, h), k, delta_t/2);
+  if positive
+    vals_res = non_linear_part(linear_part(non_linear_part(vals, k, delta_t/2), k, delta_t), k, delta_t/2);
   else
-    vals_res = linear_part(non_linear_part(linear_part(vals, k, delta_t/2), k, h), k, delta_t/2);
+    vals_res = linear_part(non_linear_part(linear_part(vals, k, delta_t/2), k, delta_t), k, delta_t/2);
   end
 
   if m >= 1
