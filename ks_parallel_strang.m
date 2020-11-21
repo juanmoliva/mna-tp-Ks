@@ -1,5 +1,5 @@
 % Mismos parametros que la Serial Solution, recibiendo un orden de paralelización
-function vals = ks_parallel_lie_trotter (x, t, order)
+function vals = ks_parallel_strang (x, t, order)
   [~,N] = size(x);
   
   delta_x = x(2) - x(1);
