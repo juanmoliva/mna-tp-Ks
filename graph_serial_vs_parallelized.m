@@ -21,13 +21,16 @@ for m = 0:5
     tic
 
     values2 = ks_parallel_lie_trotter(x, t, order);
+%    values2 = ks_parallel_strang(x, t, order);
+
 
     parallel_times = [parallel_times,toc];
 
     [X2,Y2] = meshgrid(x, t);
     figure
     mesh(X2,Y2,real(values2)) 
-    title('Paralelo');
+    title(['Paralelo orden: ', num2str(order)]);
+
 
     disp('Serie');
     tic
@@ -39,7 +42,8 @@ for m = 0:5
     [X,Y] = meshgrid(x, t);
     figure
     mesh(X,Y,real(values)) 
-    title('Serie');
+    title(['Serie orden: ', num2str(order)]);
+
 end
 
 figure
