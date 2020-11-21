@@ -44,7 +44,7 @@ figure
 plot(orders,parallel_times,orders,serial_times);
 xlabel('Orden');
 ylabel('Tiempo');
-legend({'Paralelo','En serie'},'ubicación','southwest');
+legend('Paralelo','En serie');
 
 
 figure
