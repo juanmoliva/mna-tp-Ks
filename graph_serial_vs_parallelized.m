@@ -33,7 +33,7 @@ for m = 0:5
 
     values = ks_serial (x, t, order);
 
-    serial_times_vector = [serial_times_vector,toc];
+    serial_times = [serial_times,toc];
 
     [X,Y] = meshgrid(x, t);
     figure
